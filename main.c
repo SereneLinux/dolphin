@@ -6,10 +6,10 @@
 int main(int argc, char* argv[]) {
 
 	int _permit_root = geteuid();	//root権限あれば0になるやつ
-	int _return = 0;		//戻り値を設定
+	int _return = 0;		//エラーコード
 
 
-	install(argv[2]);
+//	install(argv[2]);
 
 
 	if (!(argv[1])) {
@@ -21,7 +21,7 @@ int main(int argc, char* argv[]) {
 	}
 
 	if (_return) {
-		printf("\nERROR!!\n\n");
+		printf("\nERROR %i\n\n",_return);
 		return _return;
 	}
 
