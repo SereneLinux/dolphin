@@ -4,16 +4,25 @@
 
 int main(int argc, char* argv[]) {
 
-	//root権限あれば0になる
-	int _permit_root = geteuid();
+	int _permit_root = geteuid();	//root権限あれば0になるやつ
 
-	if (_permit_root) {
-		//root権限なかったとき
-		printf("You need to run dolphin in ROOT (or use sudo).");
-		return 1;
+	int _return = 0;
+
+
+
+	if (!(argv[1])) {
+		printf("COULDN'T FIND OPTION!!\n");
+		_return = 1;
+	} if (_permit_root) {
+		printf("You need to run dolphin in ROOT (or use sudo).\n");
+		_return = 1;
 	}
 
-	printf("ROOT!\n");
+	if (_return) {
+		printf("ERROR\n");
+		return _return;
+	}
 
+	printf("success dolphin !");
 	return 0;
 }
