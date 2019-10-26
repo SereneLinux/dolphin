@@ -27,8 +27,3 @@ int main(int argc, char* argv[]) {
 
 	return 0;
 }
-
-void _action(int action,char option) {
-	printf("Success %i %i",action,option);
-	return;
-}
