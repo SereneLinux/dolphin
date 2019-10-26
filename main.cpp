@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <string>
 #include "dolphin.h"
 
 int main(int argc, char* argv[]) {
@@ -18,18 +19,16 @@ int main(int argc, char* argv[]) {
 	}
 
 	if (_return) {
-		printf("ERROR\n");
+		printf("\nERROR!!\n\n");
 		return _return;
 	}
 
+	install(argv[2]);
 
-	_action(argv[1]);
-
-	printf("success dolphin %s !",argv[1]);
 	return 0;
 }
 
-int _action(char* hoge) {
-	printf("get value 1 is %s\n",hoge);
-	return 0;
+void _action(int action,char option) {
+	printf("Success %i %i",action,option);
+	return;
 }
