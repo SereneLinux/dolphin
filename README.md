@@ -1,2 +1,2 @@
 # dolphin
-The dolphin package manager
+The dolphin package manager on apt ;)
