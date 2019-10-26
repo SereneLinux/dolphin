@@ -1,2 +1,2 @@
 # dolphin
-the dolphin package manager
+The dolphin package manager.
