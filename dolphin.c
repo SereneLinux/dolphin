@@ -1,18 +1,16 @@
 #include <stdio.h>
+#include <unistd.h>
 #include "dolphin.h"
 
 int main(int argc, char* argv[]) {
 
 	int _permit_root = geteuid();	//root権限あれば0が入るやつ
 	int _return = 0;		//エラーコード
-
-	if (!(argv[1])) {
-		printf("(HELP WILL BE SHOWN HERE)\n");
-		return 3;
-	}
+	int i = 1;
 
 
-	
+	hoge
+
 
 	if (_permit_root) {
 		printf("You need to run dolphin in ROOT (or use sudo).\n");
