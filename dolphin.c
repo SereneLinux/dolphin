@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <unistd.h>
 #include "dolphin.h"
 
@@ -7,15 +8,24 @@ int main(int argc, char* argv[]) {
 
 	int _permit_root = geteuid();	//root権限あれば0が入るやつ
 	int _return = 0;		//エラーコード
-
-
-//	install(argv[2]);
+	char *hoge = 0;
 
 
 	if (!(argv[1])) {
-		printf("COULDN'T FIND OPTION!!\n");
+		printf("(HELP HERE)\n");
 		_return = 3;
-	} else if (_permit_root) {
+	}
+
+
+
+	if (strchr(argv[1],(int)'-')) {	
+		if (!strstr(argv[1],"--")) {
+			printf("OPTION: %s\n",argv[1]);
+		}
+	}
+
+
+	if (_permit_root) {
 		printf("You need to run dolphin in ROOT (or use sudo).\n");
 		_return = 2;
 	}
