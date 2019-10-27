@@ -45,5 +45,12 @@ while [ -- != "$1" ]; do
     shift 
 done
 
+if [ $(( $I_FLAG + $R_FLAG + $U_FLAG )) -ge 2 ]; then
+       	echo ERROR!!
+	exit 3;
+#elif [  ]; then
+#	a
+fi
+
 #exec dolphin-bin $S_FLAG,$I_FLAG,$R_FLAG,$U_FLAG,$2
 exec echo -n $S_FLAG,$I_FLAG,$R_FLAG,$U_FLAG,
