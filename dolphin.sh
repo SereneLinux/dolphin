@@ -31,4 +31,4 @@ while [ -- != "$1" ]; do
     shift 
 done
 
-exec dolphin-bin
+exec dolphin-bin $S_FLAG,$I_FLAG,$R_FLAG,$U_FLAG
