@@ -45,4 +45,5 @@ while [ -- != "$1" ]; do
     shift 
 done
 
-exec echo $S_FLAG,$I_FLAG,$R_FLAG,$U_FLAG
+#exec dolphin-bin $S_FLAG,$I_FLAG,$R_FLAG,$U_FLAG,$2
+exec echo -n $S_FLAG,$I_FLAG,$R_FLAG,$U_FLAG,
