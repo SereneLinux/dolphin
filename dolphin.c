@@ -1,14 +1,12 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <string.h>
 #include "dolphin.h"
 
 int main(int argc, char* argv[]) {
 
 	int _permit_root = geteuid();	//root権限あれば0が入るやつ
 	int _return = 0;		//エラーコード
-
-
-	printf("%s",argv[1]);	
 
 
 	if (_permit_root) {
